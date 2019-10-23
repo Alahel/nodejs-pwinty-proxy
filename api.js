@@ -1,4 +1,5 @@
 const rp = require('request-promise')
+const { BadRequest } = require('http-errors')
 const {
   pwinty: { rootUrl, merchantId, apiKey },
 } = require('./config')
@@ -78,6 +79,23 @@ const submitOrder = async data => {
     imageSizing = 'Crop',
     sku,
   } = data
+  if (
+    !(
+      country &&
+      name &&
+      addr1 &&
+      city &&
+      county &&
+      zipCode &&
+      shippingMethod &&
+      imageUrl &&
+      imageCopies &&
+      imageSizing &&
+      sku
+    )
+  ) {
+    throw new BadRequest()
+  }
   const postData = {
     countryCode: country,
     recipientName: name,
