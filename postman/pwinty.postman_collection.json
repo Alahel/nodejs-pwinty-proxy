@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "50c27bc7-69b8-42a9-83f2-534ebaf93d59",
+		"name": "pwinty",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ROOT_URL}}/health",
+					"host": [
+						"{{ROOT_URL}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ROOT_URL}}/orders/814568",
+					"host": [
+						"{{ROOT_URL}}"
+					],
+					"path": [
+						"orders",
+						"814568"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"country\":\"GB\",\n    \"name\":\"Jones is my name\",\n    \"addr1\":\"Test addr1\",\n    \"city\":\"test city\",\n    \"county\":\"Glamorga\",\n    \"zipCode\":\"31300\",\n    \"shippingMethod\":\"Express\",\n    \"imageUrl\":\"https://neoteric.eu/wp-content/uploads/2019/07/node-vs-python.png\",\n    \"imageCopies\": 3,\n    \"imageSizing\": \"Crop\",\n    \"sku\":\"ART-FAP-CPP-6X6-PRODIGI_GB\"\n}"
+				},
+				"url": {
+					"raw": "{{ROOT_URL}}/orders",
+					"host": [
+						"{{ROOT_URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{ROOT_URL}}/orders/814568/cancel",
+					"host": [
+						"{{ROOT_URL}}"
+					],
+					"path": [
+						"orders",
+						"814568",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
