@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-pwinty-proxy",
+  "version": "1.0.0",
+  "description": "A proxy adapter for pwinty API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "prettify": "prettier --write \"**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alahel/nodejs-pwinty-proxy.git"
+  },
+  "author": "Alahel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alahel/nodejs-pwinty-proxy/issues"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "homepage": "https://github.com/Alahel/nodejs-pwinty-proxy#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2"
+  }
+}
