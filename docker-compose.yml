@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  pwinty-proxy:
+    build: .
+    ports:
+      - '5000:80'
+    environment:
+      - PORT=80
+      - PWINTY_ROOT_URL=https://sandbox.pwinty.com/v3.0
+      - PWINTY_MERCHANT_ID=xxxMerchantId
+      - PWINTY_API_KEY=xxxApiKey
