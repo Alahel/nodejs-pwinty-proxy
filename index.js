@@ -55,7 +55,7 @@ app.put(
   }),
 )
 
-app.use((err, req, res) => res.sendStatus(500))
+app.use((err, req, res, next) => res.sendStatus(500))
 app.listen(port, () => {
   console.log(`Server listening on ${port}`)
 })
