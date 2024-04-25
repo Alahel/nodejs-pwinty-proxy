@@ -1,6 +1,6 @@
 # nodejs-pwinty-proxy
 
-A basic proxy to request the pwinty API from a nodejs server
+A basic proxy to request the pwinty API (https://pwinty.com/ & https://www.prodigi.com/print-api/docs/) from a nodejs server
 
 Everything relies in the postman sub-folder for proper API testing.
 
